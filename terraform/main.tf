@@ -1,44 +1,30 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "us-west-2"  # Replace with your preferred region
 }
 
-resource "aws_vpc" "main" {
-  cidr_block = "10.0.0.0/16"
+data "aws_vpc" "existing_vpc" {
+  id = "vpc-04b337a28e503db49"  # Replace with your VPC ID
 }
 
-resource "aws_subnet" "main" {
-  vpc_id            = aws_vpc.main.id
-  cidr_block        = "10.0.1.0/24"
-  availability_zone = "us-west-2a"
+data "aws_subnet" "existing_subnet" {
+  id = "subnet-08c4caa771128b5e4"  # Replace with your existing subnet ID
 }
 
-resource "aws_security_group" "allow_minecraft" {
-  vpc_id = aws_vpc.main.id
-
-  ingress {
-    from_port   = 25565
-    to_port     = 25565
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+data "aws_security_group" "existing_minecraft_sg" {
+  id = "sg-048cb1a8dce05d110" 
 }
 
 resource "aws_instance" "minecraft" {
-  ami           = "ami-0c55b159cbfafe1f0"  # Amazon Linux 2 AMI
-  instance_type = "t2.micro"
-  subnet_id     = aws_subnet.main.id
-  security_groups = [aws_security_group.allow_minecraft.name]
-
+  ami                      = "ami-05a6dba9ac2da60cb"  # Replace with the appropriate AMI ID for your region
+  instance_type            = "t4g.small"
+  subnet_id                = data.aws_subnet.existing_subnet.id
+  vpc_security_group_ids   = [data.aws_security_group.existing_minecraft_sg.id]
+  associate_public_ip_address = true
   tags = {
-    Name = "MinecraftServer"
+    Name = "Minecraft3.0 Server"
   }
+
+  key_name = "Minecraft"  # Replace with your key pair name
 
   user_data = <<-EOF
     #!/bin/bash
@@ -46,6 +32,7 @@ resource "aws_instance" "minecraft" {
     sudo yum install -y docker
     sudo service docker start
     sudo usermod -a -G docker ec2-user
-    docker run -d -p 25565:25565 itzg/minecraft-server
+    sudo docker run -d -p 25565:25565 --name minecraft-server itzg/minecraft-server
+    echo "Docker container started" > /tmp/user_data.log
   EOF
 }
