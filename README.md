@@ -5,32 +5,32 @@ This git hub contains the needed the need files for setting up a minecraft serve
 
 - **Terraform** (version 1.0+)
   - Installation:
-    - **macOS**:`brew tap hashicorp/tap && brew install hashicorp/tap/terraform`.
-    - **Windows**: Download from [Terraform Downloads](https://www.terraform.io/downloads.html).
-    - **Linux**: Use the package manager or download from [Terraform Downloads](https://www.terraform.io/downloads.html).
+    - macOS:`brew tap hashicorp/tap && brew install hashicorp/tap/terraform`.
+    - Windows: Download from [Terraform Downloads](https://www.terraform.io/downloads.html).
+    - Linux: Use the package manager or download from [Terraform Downloads](https://www.terraform.io/downloads.html).
 
 - **Ansible** (version 2.9+)
   - Installation:
-    - **macOS**: `brew install ansible`.
-    - **Windows**: Use WSL and follow Linux instructions.
-    - **Linux**: `sudo apt update && sudo apt install ansible`.
+    - macOS: `brew install ansible`.
+    - Windows: Use WSL and follow Linux instructions.
+    - Linux: `sudo apt update && sudo apt install ansible`.
 
 - **AWS CLI** (version 2)
   - Installation:
-    - **macOS**: `brew install awscli`.
-    - **Windows**: Download from [AWS CLI Installer](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
-    - **Linux**: `sudo apt install awscli`.
+    - macOS: `brew install awscli`.
+    - Windows: Download from [AWS CLI Installer](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+    - Linux: `sudo apt install awscli`.
   - Configure: `aws configure`.
 
 - **Docker**
   - Installation:
-    - **Windows and macOS**: Download and install from [Docker Desktop](https://www.docker.com/products/docker-desktop).
-    - **Linux**: Use the package manager: `sudo apt update && sudo apt install docker.io`.
+    - Windows and macOS: Download and install from [Docker Desktop](https://www.docker.com/products/docker-desktop).
+    - Linux: Use the package manager: `sudo apt update && sudo apt install docker.io`.
 
 ### Configuration
 
-- **AWS Credentials**: Configure your AWS CLI with valid credentials using `aws configure`.
-- **Ensure SSH Key Permissions**: Set the correct permissions for the SSH private key: `chmod 400 terraform/minecraft-key.pem`.
+- AWS Credentials: Configure your AWS CLI with valid credentials using `aws configure`.
+- Ensure SSH Key Permissions: Set the correct permissions for the SSH private key: `chmod 400 terraform/minecraft-key.pem`.
 
 ## Diagram of the Major Steps in the Pipeline
   -First all the depencies need to be downloaded after that the terrraform script can be ran to set up the ec2 instance. Following the succesful setup of the ec2 instance the playbook can be ran to configure the minecraft server. Once the server is configured all there is left to do is to connect.
