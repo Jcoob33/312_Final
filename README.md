@@ -73,8 +73,14 @@ Now that the ec2 instance is running we now just need to setup and configure the
 After that command is ran you should be able to see all the section being setup through the terminal, once it is finished and you have access to the terminal you should be able to access the server.
 
 **Accessing the server:**
-Now that the server is up and running you can check it through two methonds
+Now that the server is up and running you can check it through two methods the first one will be through minecraft client itself or if you just want to check if the server is running "nmap" can be used.
 
+-Minecraft Client: You need to first open your minecraft client and then go to multiplayer section. You can then click the add server option, enter the server infor, and then enter the inforamtion and connect.
+-Namp: If your goal is to just check the server status you can use the following command
+```sh
+    nmap -sV -Pn -p T:25565 34.223.226.154
+```
+NOTE: You need to change the ip address to the one that your ec2 instance is wrong one, the one in the command is a example.
 ### Resources
 
 #### Ansible:
