@@ -1,4 +1,5 @@
-## Requirements For Pipeline
+### Overveiw
+This git hub contains the needed the need files for setting up a minecraft server through AWS. The main files that are needed in this process will be Main.tf which sets up the ec2 instance and also the Minecraft_setup.yml file for congiuring the minecraft server. The other files will be genterated as you run some of the commands listed below. THe process is largly automated so there will only be a few commands that will be needed.
 
 ### Needed Tools
 
