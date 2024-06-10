@@ -35,3 +35,13 @@
 
 - **AWS Credentials**: Configure your AWS CLI with valid credentials using `aws configure`.
 - **Ensure SSH Key Permissions**: Set the correct permissions for the SSH private key: `chmod 400 terraform/minecraft-key.pem`.
+
+## Diagram of the Major Steps in the Pipeline
+
+```mermaid
+graph TD;
+    A[User Setup] --> B[Terraform Apply]
+    B --> C[Provision AWS Resources]
+    C --> D[Run Ansible Playbook]
+    D --> E[Configure and Start Minecraft Server]
+    E --> F[Access Minecraft Server]
