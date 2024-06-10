@@ -21,11 +21,6 @@
     - **Linux**: Use the package manager: `sudo apt install awscli`.
   - Configure: `aws configure`.
 
-- **SSH Client**
-  - Installation:
-    - **Windows**: Use the built-in OpenSSH client or install [PuTTY](https://www.putty.org/).
-    - **macOS and Linux**: SSH client is usually pre-installed.
-
 - **Docker**
   - Installation:
     - **Windows and macOS**: Download and install from [Docker Desktop](https://www.docker.com/products/docker-desktop).
