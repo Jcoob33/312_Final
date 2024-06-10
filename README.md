@@ -2,23 +2,23 @@
 
 ### Needed Tools
 
-- **Terraform** (v1.0+)
+- **Terraform** (version 1.0+)
   - Installation:
+    - **macOS**:`brew tap hashicorp/tap && brew install hashicorp/tap/terraform`.
     - **Windows**: Download from [Terraform Downloads](https://www.terraform.io/downloads.html).
-    - **macOS**: Use Homebrew: `brew tap hashicorp/tap && brew install hashicorp/tap/terraform`.
     - **Linux**: Use the package manager or download from [Terraform Downloads](https://www.terraform.io/downloads.html).
 
-- **Ansible** (v2.9+)
+- **Ansible** (version 2.9+)
   - Installation:
+    - **macOS**: `brew install ansible`.
     - **Windows**: Use WSL and follow Linux instructions.
-    - **macOS**: Use Homebrew: `brew install ansible`.
-    - **Linux**: Use the package manager: `sudo apt update && sudo apt install ansible`.
+    - **Linux**: `sudo apt update && sudo apt install ansible`.
 
-- **AWS CLI** (v2)
+- **AWS CLI** (version 2)
   - Installation:
+    - **macOS**: `brew install awscli`.
     - **Windows**: Download from [AWS CLI Installer](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
-    - **macOS**: Use Homebrew: `brew install awscli`.
-    - **Linux**: Use the package manager: `sudo apt install awscli`.
+    - **Linux**: `sudo apt install awscli`.
   - Configure: `aws configure`.
 
 - **Docker**
