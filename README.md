@@ -84,7 +84,7 @@ Now that the server is up and running you can check it through two methods the f
 ```
 NOTE: You need to change the ip address to the one that your ec2 instance is wrong one, the one in the command is a example.
 ### Resources
-
+This tutorial was largly base off the information and examples that can be found in the links below. All these links to a fantasic job explaining and showing how to build terraform and ansible scripts. 
 #### Ansible:
 - [Ansible User Module](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html)
 - [Docker Minecraft Server](https://docker-minecraft-server.readthedocs.io/en/latest/#using-docker-compose)
