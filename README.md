@@ -51,7 +51,15 @@ graph TD;
 **Setup:** 
 Like in the diagram above the fist step is going to be ensureing that you have all the nessery dependenices downloaded onto your machine.
 These dependenices can be found above with links for macOS, windows, and linux. Follow the links and download the one corrisponding to your 
-machine. Once the dependinces are downloaded you can copy the files in the directoy to your local machine to be used in the following steps.
+machine. For awsCLI you are also going to need to configure it. This can be done via the aws configure command.
+```sh
+    aws configure
+```
+You will be asked a string of questions that can be filled in through the aws details tab on the aws client. You can also just open the credentials file through vim useing the following command.
+```sh
+    vim ~/.aws/credentials
+```
+Once the dependinces are downloaded you can copy the files in the directoy to your local machine to be used in the following steps.
 
 **Terraform:**
 First we need to make an ec2 instance which can be done through the provisioning script in the file Main.tf. First open a terminal
