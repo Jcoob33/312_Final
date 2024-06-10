@@ -37,6 +37,7 @@
 - **Ensure SSH Key Permissions**: Set the correct permissions for the SSH private key: `chmod 400 terraform/minecraft-key.pem`.
 
 ## Diagram of the Major Steps in the Pipeline
+  -First all the depencies need to be downloaded after that the terrraform script can be ran to set up the ec2 instance. Following the succesful setup of the ec2 instance the playbook can be ran to configure the minecraft server. Once the server is configured all there is left to do is to connect.
 
 ```mermaid
 graph TD;
