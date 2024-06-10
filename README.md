@@ -47,6 +47,25 @@ graph TD;
     D --> E[Configure and Start Minecraft Server]
     E --> F[Access Minecraft Server]
 ```
+*** Pipeline steps exaplianed/Needed commands
+Setup: Like in the diagram above the fist step is going to be ensureing that you have all the nessery dependenices downloaded onto your machine.
+These dependenices can be found above with links for macOS, windows, and linux. Follow the links and download the one corrisponding to your 
+machine. Once the dependinces are downloaded you can copy the files in the directoy to your local machine to be used in the following steps.
+
+Terraform: First we need to make an ec2 instance which can be done through the provisioning script in the file Main.tf. First open a terminal
+and use the cd command to get into the "Terraform" folder. Once you are in the folder yur are then going to run.
+```sh
+    terraform init
+```
+This command initalizes the working directory containing the terraform configuration files. After that we are going to run the following command from the same terminal.
+```sh
+    terraform apply
+```
+The "terraform apply" command is going to apply the configuration sprict and create the ec2 instance with the correct configureations. After framework is made the ec2 instance will be running which brings us to the next step
+
+Ansible(Minecraft server setup):
+
+
 ### Resources
 
 #### Ansible:
@@ -60,4 +79,5 @@ graph TD;
 #### Terraform:
 - [Terraform AWS Provider Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 - [Terraform EC2 Instance](https://spacelift.io/blog/terraform-ec2-instance)
-- [Terraform Internet Gateway Resource](https://registry
+- [Terraform Internet Gateway Resource](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway)
+- [Terraform Route Table Association Resource](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association)
