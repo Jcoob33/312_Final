@@ -46,3 +46,18 @@ graph TD;
     C --> D[Run Ansible Playbook]
     D --> E[Configure and Start Minecraft Server]
     E --> F[Access Minecraft Server]
+```
+### Resources
+
+- **Ansible:
+  -https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html
+  -https://docker-minecraft-server.readthedocs.io/en/latest/#using-docker-compose
+  -https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_module.html
+  -https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_module.html
+  -https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+  -https://github.com/itzg/docker-minecraft-server/tree/master/examples
+- **Terraform
+  -https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+  -https://spacelift.io/blog/terraform-ec2-instance
+  -https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway
+  -https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association
