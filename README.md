@@ -36,11 +36,9 @@
 
 ```mermaid
 graph TD;
-    A[User Setup] --> B[Terraform Apply]
-    B --> C[Provision AWS Resources]
-    C --> D[Run Ansible Playbook]
-    D --> E[Configure and Start Minecraft Server]
-    E --> F[Access Minecraft Server]
+    A[User Setup] --> B[Terraform]
+    B --> C[Ansible]
+    C --> D[Connect]
 ```
 ### Pipeline steps exaplianed/Needed commands
 **Setup:** 
