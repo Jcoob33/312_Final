@@ -49,15 +49,15 @@ graph TD;
 ```
 ### Resources
 
-- **Ansible:
-  -https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html
-  -https://docker-minecraft-server.readthedocs.io/en/latest/#using-docker-compose
-  -https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_module.html
-  -https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_module.html
-  -https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
-  -https://github.com/itzg/docker-minecraft-server/tree/master/examples
-- **Terraform
-  -https://registry.terraform.io/providers/hashicorp/aws/latest/docs
-  -https://spacelift.io/blog/terraform-ec2-instance
-  -https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway
-  -https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association
+#### Ansible:
+- [Ansible User Module](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html)
+- [Docker Minecraft Server](https://docker-minecraft-server.readthedocs.io/en/latest/#using-docker-compose)
+- [Ansible Service Module](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_module.html)
+- [Ansible Yum Module](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_module.html)
+- [Ansible Docker Container Module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
+- [Docker Minecraft Server Examples](https://github.com/itzg/docker-minecraft-server/tree/master/examples)
+
+#### Terraform:
+- [Terraform AWS Provider Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+- [Terraform EC2 Instance](https://spacelift.io/blog/terraform-ec2-instance)
+- [Terraform Internet Gateway Resource](https://registry
