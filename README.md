@@ -3,19 +3,19 @@ This git hub contains the needed the need files for setting up a minecraft serve
 
 ### Needed Tools
 
-- **Terraform** (version 1.0+)
+**Terraform** (version 1.0+)
   - Installation:
     - macOS:`brew tap hashicorp/tap && brew install hashicorp/tap/terraform`.
     - Windows: Download from [Terraform Downloads](https://www.terraform.io/downloads.html).
     - Linux: Use the package manager or download from [Terraform Downloads](https://www.terraform.io/downloads.html).
 
-- **Ansible** (version 2.9+)
+**Ansible** (version 2.9+)
   - Installation:
     - macOS: `brew install ansible`.
     - Windows: Use WSL and follow Linux instructions.
     - Linux: `sudo apt update && sudo apt install ansible`.
 
-- **AWS CLI** (version 2)
+**AWS CLI** (version 2)
   - Installation:
     - macOS: `brew install awscli`.
     - Windows: Download from [AWS CLI Installer](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
