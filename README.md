@@ -7,12 +7,11 @@ This git hub contains the needed the need files for setting up a minecraft serve
   - Installation:
     - macOS:`brew tap hashicorp/tap && brew install hashicorp/tap/terraform`.
     - Windows: Download from [Terraform Downloads](https://www.terraform.io/downloads.html).
-    - Linux: Use the package manager or download from [Terraform Downloads](https://www.terraform.io/downloads.html).
+    - Linux: Download from [Terraform Downloads](https://www.terraform.io/downloads.html).
 
 **Ansible** (version 2.9+)
   - Installation:
     - macOS: `brew install ansible`.
-    - Windows: Use WSL and follow Linux instructions.
     - Linux: `sudo apt update && sudo apt install ansible`.
 
 **AWS CLI** (version 2)
@@ -72,12 +71,12 @@ Now that the ec2 instance is running we now just need to setup and configure the
 ```sh
     ansible-playbook -i inventory.ini Minecraft_setup.yml
 ```
-After that command is ran you should be able to see all the section being setup through the terminal, once it is finished and you have access to the terminal you should be able to access the server.
+After that command is ran you should be able to see all the sections being setup through the terminal, once it is finished and you have access to the terminal you should be able to access the server.
 
 **Accessing the server:**
 Now that the server is up and running you can check it through two methods the first one will be through minecraft client itself or if you just want to check if the server is running "nmap" can be used.
 
--Minecraft Client: You need to first open your minecraft client and then go to multiplayer section. You can then click the add server option, enter the server infor, and then enter the inforamtion and connect.
+-Minecraft Client: You need to first open your minecraft client and then go to multiplayer section. You can then click the add server option, enter the server IP, and then enter the inforamtion and connect.
 -Namp: If your goal is to just check the server status you can use the following command
 ```sh
     nmap -sV -Pn -p T:25565 34.223.226.154
@@ -98,3 +97,9 @@ This tutorial was largly base off the information and examples that can be found
 - [Terraform EC2 Instance](https://spacelift.io/blog/terraform-ec2-instance)
 - [Terraform Internet Gateway Resource](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway)
 - [Terraform Route Table Association Resource](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association)
+
+#### Tools:
+- [Terraform Downloads](https://www.terraform.io/downloads.html)
+- [AWS CLI Installer](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
